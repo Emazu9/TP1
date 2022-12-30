@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Maison A louer</title>
+    </head>
+    <body>
+        <h1>De quelle maison avez-vous besoin?</h1>
+        <form action="/etudiants/predict/" method="POST">
+            {% csrf_token %}
+            <label>Villa</label>
+            <input type="number" name="Villa"/><br><br>
+            <br><br>
+            <label>Avenues</label>
+            <input type="number" name="Avenues"/>
+            <br><br>
+            <label>Electricite</label>
+            <input type="radio" name="Electricite" value="1">Oui</input>
+            <input type="radio" name="Electricite" value="2">Non</input>
+            <br><br>
+            <input type="submit" value="Predire"/>
+        </form>
+    </body>
+</html>
